@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+       background-image: url(data:image/jpeg;base64,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);
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+       </style>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i>Pantalla de inicio</a></li>
+        </ul>
+    </nav>
+</body>
+    <marquee>
+        <p style="color:#FF0000";>Energía Solar</p> <br>
+        <img class="masked-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCZj6KBDg_NPemii5Z3jIUwgKU4c-N_YCWOA&s" alt="Imagen" style="clip-path: url(#circle-mask);">
+        <svg width="200" height="200"style="position: absolute;">
+            <defs>
+                <clipPath id="circle-mask">
+            <circle cx="100" cy="100" r="80" class="shape" />
+                </clipPath>
+            </defs>
+        </svg>
+    </marquee>
+    <h3 style="color: white">¿Cómo se obtiene la energía de la luz solar?</h3>
+    <h4 style="color: white">Se usan paneles solares, son quienes reciben toda la energia de los rayos del sol. Están hechos principalmente de silicio, de color azul oscuro para que sea capaz de que la luz del sol se concentre más es estos.</h4>
+<style>
+    #dropdown {
+        width: 100px;
+        height: 100px;
+        transition: width 2s, height 4s;
+    }
+
+
+    #dropdown:hover {
+        width: 200px;
+        height: 200px;
+    }
+
+      img.opacity {
+        opacity: 1;
+        filter: alpha(opacity=50);
+        zoom: 1;
+      }
+
+      img.opacity:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=100);
+        zoom: 1;
+      }
+</style>
+<br>
+<center>
+    <picture><img id=dropdown
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIVu34UHSQco9ZQruIw72G7TZKe5eUEbHGoA&s"
+        alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIVu34UHSQco9ZQruIw72G7TZKe5eUEbHGoA&s"
+        width="120" height="70"  class="opacity"> <br>Castillo Montejuma, Arizona</picture>
+    </center>
+<br>
+</body>
+</html>

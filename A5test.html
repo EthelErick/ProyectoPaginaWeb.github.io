@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    @keyframes gradientBackground {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    nav {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    nav ul li {
+        margin: 0 15px;
+    }
+    #display-area {
+width: 300px;
+height: 200px;
+border: 1px solid #000;
+margin-bottom: 10px;
+overflow: auto;
+}
+</style>
+</head>
+<body bgcolor="lightyellow">
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i>Pantalla de inicio</a></li>
+        </ul>
+    </nav>
+    <br>
+    <h3>¿Que tipo de enrgías utilizas?</h3>    
+<div id="display-area"></div>
+<button onclick="mostrarTexto()">Escribir</button>
+<button onclick="limpiarDisplay()">Borrar</button>
+<script>
+
+function mostrarTexto() {
+var texto = prompt("texto a mostrar");
+var displayArea = document.getElementById("display-area");
+displayArea.innerHTML += "<p>" + texto + "</p>";
+}
+function limpiarDisplay() {
+var displayArea = document.getElementById("display-area");
+displayArea.innerHTML = "";
+}
+</script> <br> <br>
+
+<center> <h3>En resumen</h3>
+    <select id="Mercado" onchange="miFuncion()">
+          <option value="opcion">Selecciona una opcion:</option>
+          <option value="Frutas">¿Que son?</option>
+          <option value="Verduras">¿Como se producen?</option>
+          <option value="Carnes">¿En que se beneficia el medio ambiente?</option>
+          <option value="Cereales">¿Como afecta a nuestra vida?</option>
+      </select>
+    </center>
+      <div id="texto"></div>
+      <script>
+      function miFuncion() {
+        var x = document.getElementById("Mercado").value;
+        if ( x === "Frutas") {
+            document.getElementById("texto").innerHTML=`
+                <center>
+                <h2>Las energias limpias y renovables son las energias que no contaminan y se pueden generar sin un limite.</h2>
+                </center>
+            `;
+        }
+        if ( x === "Verduras") {
+            document.getElementById("texto").innerHTML=`
+                <center>
+                <h2> Existen diferentes metodos, pero en todos se usa a la naturaleza para generar la energia, aunque depende de cada una si genera o no daños.</h2>
+                </center>
+            `;
+        }
+        if ( x === "Carnes") {
+            document.getElementById("texto").innerHTML=`
+                <center>
+                <h2>Se favorece de la nula emisión de gases de efecto invernadero (GEI) y otros contaminantes que contribuyen al cambio climático.</h2>
+                </center>
+            `;
+        }
+        if ( x === "Cereales") {
+            document.getElementById("texto").innerHTML=`
+                <center>
+                <h2>Dependiendo de la ciudad se ve reflejada en los precios de la energia, si hay mucha energia limpia los precios bajan.</h2>
+                </center>
+            `;
+        }
+      }
+      </script>     
+</body>
+</html>
